@@ -1,0 +1,34 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_portrait_SOV_WZSY
+		texturefile = "gfx/leaders/SOV/portrait_SOV_WZSY.png"
+	}
+	spriteType = {
+		name = GFX_portrait_SOV_cyber_wzsy
+		texturefile = "gfx/leaders/SOV/portrait_SOV_cyber_wzsy.png"
+	}
+	spriteType = {
+		name = GFX_portrait_SOV_bvvd_cs
+		texturefile = "gfx/leaders/SOV/portrait_SOV_bvvd_cs.png"
+	}
+	spriteType = {
+		name = GFX_advisor_SOV_bvvd_cs
+		texturefile = "gfx/interface/ideas/advisor_SOV_bvvd_cs.png"
+	}
+	spriteType = {
+		name = GFX_portrait_SOV_nikita_cs
+		texturefile = "gfx/leaders/SOV/portrait_SOV_nikita_cs.png"
+	}
+	spriteType = {
+		name = GFX_advisor_SOV_nikita_cs
+		texturefile = "gfx/interface/ideas/advisor_SOV_nikita_cs.png"
+	}
+	spriteType = {
+		name = GFX_portrait_SOV_anton_cs
+		texturefile = "gfx/leaders/SOV/portrait_SOV_anton_cs.png"
+	}
+	spriteType = {
+		name = GFX_advisor_SOV_anton_cs
+		texturefile = "gfx/interface/ideas/advisor_SOV_anton_cs.png"
+	}
+}

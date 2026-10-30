@@ -1,0 +1,196 @@
+add_namespace = wzsy
+
+# wzsy.1 由国策 SOV_declare_eurasian_state 的 completion_reward 直接触发
+country_event = {
+	id = wzsy.1
+	title = wzsy.1.t
+	desc = wzsy.1.d
+	picture = GFX_report_event_SOV_wzsy1
+
+	is_triggered_only = yes
+	timeout_days = 14
+
+	option = {
+		name = wzsy.1.a
+		ai_chance = { base = 100 }
+
+		# 无中生友同时成为 eurasianism（民族社会主义）与 eurasianism_left（极权社会主义）的党魁
+		add_country_leader_role = {
+			character = SOV_WZSY
+			promote_leader = yes
+			country_leader = {
+				ideology = eurasianism
+				expire = "9999.1.1.1"
+				traits = { zhanhen }
+			}
+		}
+		add_country_leader_role = {
+			character = SOV_WZSY
+			promote_leader = yes
+			country_leader = {
+				ideology = eurasianism_left
+				expire = "9999.1.1.1"
+				traits = { zhanhen }
+			}
+		}
+
+		set_country_flag = wzsy_time
+		set_cosmetic_tag = wzsy_rmtg
+
+		set_politics = {
+			ruling_party = totalitarian_socialist
+			elections_allowed = no
+		}
+	}
+
+	after = {
+		country_event = { id = wzsy.2 days = 14 }
+	}
+}
+
+country_event = {
+	id = wzsy.2
+	title = wzsy.2.t
+	desc = wzsy.2.d
+	picture = GFX_report_event_SOV_wzsy2
+
+	is_triggered_only = yes
+	timeout_days = 14
+
+	trigger = {
+		has_country_flag = wzsy_time
+	}
+
+	option = {
+		name = wzsy.2.a
+		custom_effect_tooltip = wzsy.2.a_tt
+		add_manpower = -3
+		add_stability = -0.05
+		add_political_power = -50
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = {
+		name = wzsy.2.b
+		custom_effect_tooltip = wzsy.2.b_tt
+		add_manpower = -1
+		add_political_power = -100
+		add_stability = -0.20
+		country_event = { id = wzsy.3 days = 20 random_days = 6 }
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = {
+	id = wzsy.3
+	title = wzsy.3.t
+	desc = wzsy.3.d
+	picture = GFX_report_event_SOV_wzsy3
+
+	is_triggered_only = yes
+	timeout_days = 14
+
+	option = {
+		name = wzsy.3.a
+		ai_chance = {
+			base = 1
+		}
+
+		# 赛博无中生友同样接任两个意识形态的党魁
+		add_country_leader_role = {
+			character = SOV_cyber_wzsy
+			promote_leader = yes
+			country_leader = {
+				ideology = eurasianism
+				expire = "9999.1.1.1"
+				traits = { waiguai }
+			}
+		}
+		add_country_leader_role = {
+			character = SOV_cyber_wzsy
+			promote_leader = yes
+			country_leader = {
+				ideology = eurasianism_left
+				expire = "9999.1.1.1"
+				traits = { waiguai }
+			}
+		}
+
+		custom_effect_tooltip = wzsy.3.a_tt
+		hidden_effect = {
+			set_country_flag = cyber_wzsy_time
+			set_cosmetic_tag = wzsy_eurasia
+			# 旧存档里三人可能没被招募过，这里运行时再补一次（新档已在 history 里招募，重复会被忽略）
+			recruit_character = SOV_bvvd_cs
+			recruit_character = SOV_nikita_cs
+			recruit_character = SOV_anton_cs
+		}
+	}
+}
+
+country_event = {
+	id = wzsy.4
+	title = wzsy.4.t
+	desc = wzsy.4.d
+	picture = GFX_report_event_SOV_wzsy4
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = wzsy_time
+		has_country_flag = wzsy_eurasian_victory
+		NOT = { has_country_flag = wzsy_4_done }
+		any_allied_country = {
+			controls_state = 1459
+		}
+	}
+	timeout_days = 14
+
+	option = {
+		name = wzsy.4.a
+		set_country_flag = wzsy_4_done
+		# 解锁外交行动：正当化战争目标 / 保障独立 / 邀请加入阵营
+		set_country_flag = unrestricted_diplomacy_flag
+		set_country_flag = tfr_wargoal_justification_enabled
+		set_country_flag = tfr_guarantee_enabled
+		# 修改 SOV 的国家规则（放进 hidden_effect，避免提示里出现引擎自动生成的规则行）
+		hidden_effect = {
+			set_rule = { can_only_justify_war_on_threat_country = no }
+			set_rule = { can_create_factions = yes }
+			set_rule = { can_join_factions = yes }
+			set_rule = { can_guarantee_other_ideologies = yes }
+		}
+		# 只有赛博无中生友在任时才给「统一欧洲」决议
+		if = {
+			limit = { has_country_leader = { character = SOV_cyber_wzsy } }
+			set_country_flag = wzsy_unify_unlocked
+		}
+		custom_effect_tooltip = wzsy.4.a_tt
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+
+news_event = {
+	id = wzsy.5
+	title = wzsy.5.t
+	desc = wzsy.5.d
+	picture = GFX_report_event_SOV_wzsy5
+
+	is_triggered_only = yes
+	timeout_days = 14
+
+	option = {
+		name = wzsy.5.a
+		custom_effect_tooltip = wzsy.5.a_tt
+		add_political_power = 100
+		ai_chance = {
+			base = 1
+		}
+	}
+}

@@ -1,0 +1,51 @@
+leader_traits = {
+
+	zhanhen = {
+		war_support_factor = 0.15
+		stability_factor = -0.1
+		army_speed_factor = 0.13
+		army_attack_factor = 0.114
+		monthly_population = -0.091
+		army_defence_factor = 0.514
+		conscription_factor = 0.067
+		industrial_capacity_factory = 0.66
+		# 原 civilian_factory_build_speed_factor / military_factory_build_speed_factor 在 1.19 不存在，
+		# 只有统一的建造速度修正，这里取 -0.15 + 0.4 = 0.25
+		production_speed_buildings_factor = 0.25
+		consumer_goods_factor = 0.05
+	}
+
+	waiguai = {
+		war_support_factor = 0.6
+		stability_factor = 0.4
+		army_speed_factor = 0.65
+		army_attack_factor = 1.14
+		monthly_population = 9.178
+		army_defence_factor = 5.14
+		conscription_factor = 0.67
+		industrial_capacity_factory = 6.66
+		# 同上：0.5 + 0.8 = 1.3
+		production_speed_buildings_factor = 1.3
+		consumer_goods_factor = -0.5
+	}
+
+	bvvd = {
+		army_attack_factor = 0.5
+		army_defence_factor = 0.5
+		army_org = 40
+
+	}
+
+	nikita = {
+		planning_speed = 0.6
+		conscription_factor = 0.2
+		industrial_capacity_factory = 0.5
+	}
+
+	anton = {
+		local_resources_factor = 0.5
+		supply_consumption_factor = -0.4
+		breakthrough_factor = 0.5
+	}
+
+}

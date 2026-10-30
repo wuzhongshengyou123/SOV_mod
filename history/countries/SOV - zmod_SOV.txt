@@ -1,0 +1,11 @@
+# SOV history overrides · emitted by 欧亚人民至上天国 export
+# Filename idiom `SOV - z<modname>.txt` · loads after vanilla `SOV - <Name>.txt`(z > U/G/F/etc 字母序覆盖)
+# P1 minimal · recruit_character for new characters
+
+recruit_character = SOV_WZSY
+recruit_character = SOV_cyber_wzsy
+recruit_character = SOV_character
+recruit_character = SOV_character_1
+recruit_character = SOV_bvvd_cs
+recruit_character = SOV_nikita_cs
+recruit_character = SOV_anton_cs

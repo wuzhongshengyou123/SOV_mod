@@ -1,0 +1,14 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = wzsy_time
+					has_country_flag = wzsy_eurasian_victory
+					NOT = { has_country_flag = wzsy_4_done }
+				}
+				country_event = { id = wzsy.4 }
+			}
+		}
+	}
+}

@@ -1,0 +1,174 @@
+characters = {
+	SOV_WZSY = {
+		name = SOV_WZSY
+		can_be_captured = no
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_SOV_WZSY.png"
+			}
+		}
+	}
+}
+
+characters = {
+	SOV_cyber_wzsy = {
+		name = SOV_cyber_wzsy
+		can_be_captured = no
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_SOV_cyber_wzsy.png"
+			}
+		}
+	}
+}
+
+characters = {
+	SOV_bvvd_cs = {
+		name = SOV_bvvd_cs
+		portraits = {
+			civilian = {
+				large = "gfx/interface/ideas/advisor_SOV_bvvd_cs.png"
+			}
+			army = {
+				large = "gfx/leaders/SOV/portrait_SOV_bvvd_cs.png"
+				small = "gfx/leaders/SOV/portrait_SOV_bvvd_cs_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { bvvd }
+			skill = 1
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_country_flag = cyber_wzsy_time
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SOV_bvvd_cs_advisor
+			visible = {
+				has_country_flag = cyber_wzsy_time
+			}
+			allowed = {
+				original_tag = SOV
+			}
+			traits = { bvvd }
+			cost = 50
+		}
+	}
+}
+
+characters = {
+	SOV_nikita_cs = {
+		name = SOV_nikita_cs
+		portraits = {
+			civilian = {
+				large = "gfx/interface/ideas/advisor_SOV_nikita_cs.png"
+			}
+			army = {
+				large = "gfx/leaders/SOV/portrait_SOV_nikita_cs.png"
+				small = "gfx/leaders/SOV/portrait_SOV_nikita_cs_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { nikita }
+			skill = 5
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 5
+			legacy_id = -1
+			visible = {
+				has_country_flag = cyber_wzsy_time
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SOV_nikita_cs_advisor
+			visible = {
+				has_country_flag = cyber_wzsy_time
+			}
+			allowed = {
+				original_tag = SOV
+			}
+			traits = { nikita }
+			cost = 50
+		}
+	}
+}
+
+characters = {
+	SOV_anton_cs = {
+		name = SOV_anton_cs
+		portraits = {
+			civilian = {
+				large = "gfx/interface/ideas/advisor_SOV_anton_cs.png"
+			}
+			army = {
+				large = "gfx/leaders/SOV/portrait_SOV_anton_cs.png"
+				small = "gfx/leaders/SOV/portrait_SOV_anton_cs_small.png"
+			}
+		}
+		corps_commander = {
+			traits = { anton }
+			skill = 5
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 5
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				has_country_flag = cyber_wzsy_time
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SOV_anton_cs_advisor
+			visible = {
+				has_country_flag = cyber_wzsy_time
+			}
+			allowed = {
+				original_tag = SOV
+			}
+			traits = { anton }
+			cost = 50
+		}
+	}
+}
+
+characters = {
+	SOV_character = {
+		name = SOV_character
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_character_advisor
+			allowed = {
+				original_tag = SOV
+			}
+			cost = 150
+		}
+	}
+}
+
+characters = {
+	SOV_character_1 = {
+		name = SOV_character_1
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_character_1_advisor
+			allowed = {
+				original_tag = SOV
+			}
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				planning_speed = 0.2
+			}
+			cost = 150
+		}
+	}
+}

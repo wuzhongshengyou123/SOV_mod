@@ -1,0 +1,25 @@
+# TFR 的 news.410（欧亚胜利）在玩家关闭超级事件窗口时会清掉 eurasian_victory_se_flag，
+# 这里覆盖同 id 事件，额外给本 mod 记一个不会被清除的持久旗标 wzsy_eurasian_victory，
+# 供 wzsy.4 判定使用。文件全部位于 mod_SOV 内，不改动 TFR 本体。
+news_event = {
+	id = news.410
+	title = news.410.t
+	desc = news.410.d
+	picture = GFX_dugin_victory
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.410.a
+		hidden_effect = {
+			set_country_flag = wzsy_eurasian_victory
+			if = {
+				limit = {
+					is_ai = no
+				}
+				set_country_flag = eurasian_victory_se_flag
+				scoped_sound_effect = TFR_se_dugin_eurasian_victory
+				scoped_play_song = "one_minute_of_silence"
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_SOV_wzsy1"
+		texturefile = "gfx/event_pictures/event_SOV_wzsy1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOV_wzsy2"
+		texturefile = "gfx/event_pictures/event_SOV_wzsy2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOV_wzsy3"
+		texturefile = "gfx/event_pictures/event_SOV_wzsy3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOV_wzsy4"
+		texturefile = "gfx/event_pictures/event_SOV_wzsy4.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOV_wzsy5"
+		texturefile = "gfx/event_pictures/event_SOV_wzsy5.png"
+	}
+}

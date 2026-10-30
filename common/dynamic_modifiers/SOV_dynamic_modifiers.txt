@@ -1,0 +1,3 @@
+eurasian_supremacy_flag = {
+	icon = GFX_goal_unknown
+}

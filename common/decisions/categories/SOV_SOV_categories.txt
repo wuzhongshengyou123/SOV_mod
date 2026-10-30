@@ -1,0 +1,4 @@
+sov_unify_europe = {
+	icon = "GFX_goal_generic_major_war"
+	visible = { has_country_flag = wzsy_unify_unlocked }
+}
